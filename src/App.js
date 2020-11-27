@@ -1,24 +1,61 @@
-import logo from './logo.svg';
-import './App.css';
+import "antd/dist/antd.css";
+import GlobalStyle from "./styles/global";
+import { useState } from "react";
+import Header from "./components/Header";
+import Routes from "./routes";
 
 function App() {
+  const [
+    collectionCharactersRickAndMorty,
+    setCollectionCharRickAndMorty,
+  ] = useState([]);
+  const [collectionCharactersPokemon, setCollectionCharPokemon] = useState([]);
+
+  const addCharRickAndMorty = (name, image) => {
+    const newChar = { name, image };
+    setCollectionCharRickAndMorty([
+      ...collectionCharactersRickAndMorty,
+      newChar,
+    ]);
+  };
+
+  const addCharPokemon = (name, image) => {
+    const newChar = { name, image };
+    setCollectionCharPokemon([...collectionCharactersPokemon, newChar]);
+  };
+
+  const removeCharCollectionPokemon = (name) => {
+    setCollectionCharPokemon(
+      collectionCharactersPokemon.filter((char) => char.name !== name)
+    );
+  };
+
+  const removeCharCollectionRickAndMorty = (name) => {
+    setCollectionCharRickAndMorty(
+      collectionCharactersRickAndMorty.filter((char) => char.name !== name)
+    );
+  };
+
+  const totCollectionRickAndMorty = collectionCharactersRickAndMorty.length;
+  const totCollectionPokemon = collectionCharactersPokemon.length;
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <GlobalStyle></GlobalStyle>
+      <Header />
+      <div id="main-container">
+        <Routes
+          addCharRickAndMorty={addCharRickAndMorty}
+          addCharPokemon={addCharPokemon}
+          collectionCharactersPokemon={collectionCharactersPokemon}
+          collectionCharactersRickAndMorty={collectionCharactersRickAndMorty}
+          removeCharCollectionPokemon={removeCharCollectionPokemon}
+          removeCharCollectionRickAndMorty={removeCharCollectionRickAndMorty}
+          totCollectionRickAndMorty={totCollectionRickAndMorty}
+          totCollectionPokemon={totCollectionPokemon}
+        />
+      </div>
+    </>
   );
 }
 
