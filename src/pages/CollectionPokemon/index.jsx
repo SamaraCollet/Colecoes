@@ -1,4 +1,4 @@
-import { Container } from "./styles";
+import { Container } from "../../styles/styles_pages";
 import CharacterList from "../../components/CollectionListPokemon";
 
 const CollectionPokemon = ({

@@ -1,4 +1,4 @@
-import { CardStyled } from "./styles";
+import { CardStyled } from "../../styles/styles_components";
 
 const CharacterRickAndMorty = ({ name, image, addCharRickAndMorty }) => {
   const { Meta } = CardStyled;

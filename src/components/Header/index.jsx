@@ -1,6 +1,6 @@
 import { MenuBar, ButtonStyled } from "./styles";
 import { useHistory } from "react-router-dom";
-import { BiHeart, BiImages } from "react-icons/bi";
+import { BiHeart, BiImages, BiPieChartAlt2 } from "react-icons/bi";
 
 const Header = () => {
   const history = useHistory();
@@ -9,11 +9,14 @@ const Header = () => {
 
   return (
     <MenuBar>
-      <ButtonStyled onClick={sendTo("/galery")}>
+      <ButtonStyled onClick={sendTo("/")}>
         <BiImages />
       </ButtonStyled>
       <ButtonStyled onClick={sendTo("/collection")}>
         <BiHeart />
+      </ButtonStyled>
+      <ButtonStyled onClick={sendTo("/chartPie")}>
+        <BiPieChartAlt2 />
       </ButtonStyled>
     </MenuBar>
   );

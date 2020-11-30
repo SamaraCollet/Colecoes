@@ -1,17 +1,17 @@
-import { CardStyled } from "./styles";
+import { CardStyledMin } from "../../styles/styles_components";
 
 const CharacterPokemon = ({ name, image, removeCharCollectionPokemon }) => {
-  const { Meta } = CardStyled;
+  const { Meta } = CardStyledMin;
+  const nameUpper = name.charAt(0).toUpperCase() + name.slice(1);
 
   return (
-    <CardStyled
+    <CardStyledMin
       hoverable
-      style={{ width: 180 }}
       cover={<img src={image} alt={name} />}
       onClick={() => removeCharCollectionPokemon(name)}
     >
-      <Meta title={name} description="clique para excluir" />
-    </CardStyled>
+      <Meta title={nameUpper} description="clique para excluir" />
+    </CardStyledMin>
   );
 };
 

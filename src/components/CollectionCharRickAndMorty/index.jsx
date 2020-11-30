@@ -1,21 +1,20 @@
-import { CardStyled } from "./styles";
+import { CardStyledMin } from "../../styles/styles_components";
 
 const CharacterRickAndMorty = ({
   name,
   image,
   removeCharCollectionRickAndMorty,
 }) => {
-  const { Meta } = CardStyled;
+  const { Meta } = CardStyledMin;
 
   return (
-    <CardStyled
+    <CardStyledMin
       hoverable
-      style={{ width: 180 }}
       cover={<img src={image} alt={name} />}
       onClick={() => removeCharCollectionRickAndMorty(name)}
     >
       <Meta title={name} description="clique para excluir" />
-    </CardStyled>
+    </CardStyledMin>
   );
 };
 

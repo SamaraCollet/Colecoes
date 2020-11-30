@@ -1,5 +1,5 @@
 import { useHistory } from "react-router-dom";
-import { CapeMain, Cape, Container } from "./styles";
+import { CapeMain, Cape, Container } from "../../styles/styles_home";
 
 const HomeGalery = () => {
   const history = useHistory();
@@ -13,16 +13,12 @@ const HomeGalery = () => {
         <Cape onClick={sendTo("/galeryRickAndMorty")}>
           <img
             className="imgRickAndMorty"
-            src="https://www.pngkey.com/png/full/3-36122_rick-morty-png-rick-and-morty-out-of.png"
+            src="rick-and-morty-min.png"
             alt="rick and morty"
           />
         </Cape>
         <Cape onClick={sendTo("/galeryPokemon")}>
-          <img
-            className="imgPokemon"
-            src="https://imagensemoldes.com.br/wp-content/uploads/2020/04/Logo-Pokebola-Pok%C3%A9mon-PNG-1200x1200.png"
-            alt="pokemon"
-          />
+          <img className="imgPokemon" src="pokemon-min.png" alt="pokemon" />
         </Cape>
       </CapeMain>
     </Container>

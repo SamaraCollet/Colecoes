@@ -6,6 +6,7 @@ import GaleryRickAndMorty from "../pages/GaleryRickAndMorty";
 import GaleryPokemon from "../pages/GaleryPokemon";
 import CollectionRickAndMorty from "../pages/CollectionRickAndMorty";
 import CollectionPokemon from "../pages/CollectionPokemon";
+import ChartPie from "../pages/ChartPie";
 
 const Routes = ({
   addCharRickAndMorty,
@@ -19,7 +20,7 @@ const Routes = ({
 }) => {
   return (
     <Switch>
-      <Route path="/galery" exact component={HomeGalery} />
+      <Route path="/" exact component={HomeGalery} />
       <Route path="/collection" exact component={HomeCollection} />
       <Route exact path="/galeryRickAndMorty">
         <GaleryRickAndMorty
@@ -44,6 +45,12 @@ const Routes = ({
           collectionCharactersPokemon={collectionCharactersPokemon}
           removeCharCollectionPokemon={removeCharCollectionPokemon}
         />
+      </Route>
+      <Route exact path="/chartPie">
+        <ChartPie
+          totCollectionPokemon={totCollectionPokemon}
+          totCollectionRickAndMorty={totCollectionRickAndMorty}
+        ></ChartPie>
       </Route>
     </Switch>
   );

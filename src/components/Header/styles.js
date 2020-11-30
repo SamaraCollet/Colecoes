@@ -8,6 +8,11 @@ export const MenuBar = styled.div`
   align-items: center;
   height: 55px;
   background: #f38cf7;
+
+  @media only screen and (max-width: 767px) {
+    width: 100vw;
+    height: 65px;
+  }
 `;
 
 export const ButtonStyled = styled(Button)`

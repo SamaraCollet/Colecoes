@@ -1,4 +1,4 @@
-import { Container } from "./styles";
+import { Container } from "../../styles/styles_pages";
 import { useState, useEffect } from "react";
 import CharacterList from "../../components/CharacterListRickandMorty";
 import { FaAngleRight, FaAngleLeft } from "react-icons/fa";
@@ -37,7 +37,7 @@ const GaleryRickAndMorty = ({
             <FaAngleLeft />
           </button>
         ) : (
-          <button className="invisible"></button>
+          <button className="invisible buttonSubmenu"></button>
         )}
         <div>
           <h1>Rick and Morty Galeria</h1>
@@ -46,7 +46,7 @@ const GaleryRickAndMorty = ({
           </h2>
         </div>
         {page >= totalPages ? (
-          <button className="invisible"></button>
+          <button className="invisible buttonSubmenu"></button>
         ) : (
           <button className="buttonSubmenu" onClick={nextPage}>
             <FaAngleRight />

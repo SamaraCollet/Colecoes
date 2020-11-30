@@ -1,4 +1,4 @@
-import { Container } from "./styles";
+import { Container } from "../../styles/styles_pages";
 import { useState, useEffect } from "react";
 import CharacterList from "../../components/CharacterListPokemon";
 import { FaAngleRight, FaAngleLeft } from "react-icons/fa";
@@ -36,7 +36,7 @@ const GaleryPokemon = ({ addCharPokemon, totCollectionPokemon }) => {
             <FaAngleLeft />
           </button>
         ) : (
-          <button className="invisible"></button>
+          <button className="invisible buttonSubmenu"></button>
         )}
         <div>
           <h1>Pokemon Galeria</h1>
@@ -45,7 +45,7 @@ const GaleryPokemon = ({ addCharPokemon, totCollectionPokemon }) => {
           </h2>
         </div>
         {page >= totalPages ? (
-          <button className="invisible"></button>
+          <button className="invisible buttonSubmenu"></button>
         ) : (
           <button className="buttonSubmenu" onClick={nextPage}>
             <FaAngleRight />
