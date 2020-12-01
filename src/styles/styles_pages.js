@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Container = styled.div `
+export const Container = styled.div`
   @import url("https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap");
   margin-top: 30px;
   text-align: center;
@@ -62,6 +62,22 @@ export const Container = styled.div `
     }
     .buttonSubmenu {
       font-size: 3rem;
+    }
+  }
+  @media (max-width: 480px) {
+    h1 {
+      font-size: 1.7rem;
+      margin-top: 10px;
+    }
+    h2 {
+      font-size: 1rem;
+    }
+
+    .buttonSubmenu {
+      font-size: 2.5rem;
+      width: 40px;
+      height: 40px;
+      margin-top: 50px;
     }
   }
 `;

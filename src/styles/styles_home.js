@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Cape = styled.div`
+export const Cape = styled.div `
   display: flex;
   align-items: center;
   justify-content: center;
@@ -49,7 +49,7 @@ export const Cape = styled.div`
   }
 
   @media only screen and (max-width: 767px) {
-    width: 100vw;
+    width: 10vw;
     height: 37vh;
     margin: 0;
 
@@ -63,15 +63,31 @@ export const Cape = styled.div`
       background-color: transparent;
     }
     .imgRickAndMorty:hover {
-      width: 400px;
+      width: 320px;
     }
     .imgPokemon:hover {
-      width: 350px;
+      width: 270px;
+    }
+  }
+
+  @media (max-width: 480px) {
+  
+    .imgRickAndMorty {
+      width: 250px;
+    }
+    .imgPokemon {
+      width: 210px;
+    }
+    .imgRickAndMorty:hover {
+      width: 250px;
+    }
+    .imgPokemon:hover {
+      width: 210px;
     }
   }
 `;
 
-export const Container = styled.div`
+export const Container = styled.div `
   @import url("https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap");
   display: flex;
   flex-direction: column;
@@ -92,9 +108,12 @@ export const Container = styled.div`
       font-size: 2.5rem;
     }
   }
+  @media (max-width: 480px) {
+    width: 100vw;
+  }
 `;
 
-export const CapeMain = styled.div`
+export const CapeMain = styled.div `
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -109,5 +128,8 @@ export const CapeMain = styled.div`
   @media only screen and (max-width: 767px) {
     flex-direction: column;
     width: 100vw;
+  }
+  @media (max-width: 480px) {
+    margin: 0;
   }
 `;

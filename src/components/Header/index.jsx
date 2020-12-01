@@ -1,4 +1,4 @@
-import { MenuBar, ButtonStyled } from "./styles";
+import { MenuBar, ButtonStyled } from "../../styles/styles_components";
 import { useHistory } from "react-router-dom";
 import { BiHeart, BiImages, BiPieChartAlt2 } from "react-icons/bi";
 

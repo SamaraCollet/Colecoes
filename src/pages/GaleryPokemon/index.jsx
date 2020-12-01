@@ -28,6 +28,7 @@ const GaleryPokemon = ({ addCharPokemon, totCollectionPokemon }) => {
     setOffset(offset - 20);
   };
 
+  console.log(characterList);
   return (
     <Container>
       <div className="subMenu">
